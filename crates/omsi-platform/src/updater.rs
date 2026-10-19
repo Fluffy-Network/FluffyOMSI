@@ -1,4 +1,4 @@
-//! Updates from the project's GitHub releases (github.com/openOMSI-org/openOMSI).
+//! Updates from the project's GitHub releases (github.com/Fluffy-Network/FluffyOMSI).
 //!
 //! A release a maintainer starts from main publishes `v<MAJOR.MINOR.PATCH>` with one archive
 //! per platform (see .github/workflows/release.yml). The launcher asks the GitHub API for the
@@ -43,12 +43,12 @@ use std::path::{Path, PathBuf};
 use std::sync::{Arc, Mutex};
 
 /// The project on GitHub.
-pub const REPO: &str = "openOMSI-org/openOMSI";
-pub const REPO_URL: &str = "https://github.com/openOMSI-org/openOMSI";
-const LATEST_API: &str = "https://api.github.com/repos/openOMSI-org/openOMSI/releases/latest";
-const RELEASES_API: &str = "https://api.github.com/repos/openOMSI-org/openOMSI/releases?per_page=100";
+pub const REPO: &str = "Fluffy-Network/FluffyOMSI";
+pub const REPO_URL: &str = "https://github.com/Fluffy-Network/FluffyOMSI";
+const LATEST_API: &str = "https://api.github.com/repos/Fluffy-Network/FluffyOMSI/releases/latest";
+const RELEASES_API: &str = "https://api.github.com/repos/Fluffy-Network/FluffyOMSI/releases?per_page=100";
 const RELEASE_PAGES: u32 = 5;
-const NEWEST_API: &str = "https://api.github.com/repos/openOMSI-org/openOMSI/releases?per_page=10";
+const NEWEST_API: &str = "https://api.github.com/repos/Fluffy-Network/FluffyOMSI/releases?per_page=10";
 pub const FIRST_SELF_TESTED: &str = "0.2.32";
 
 /// A build the App Store delivers (every iPhone and iPad build, and a Mac build made with
@@ -1138,7 +1138,7 @@ mod tests {
     fn the_platform_file_of_a_github_release() {
         let name = asset_name("0.1.9").unwrap();
         let v = serde_json::json!({
-            "tag_name": "v0.1.9", "html_url": "https://github.com/openOMSI-org/openOMSI/releases/tag/v0.1.9", "body": "notes",
+            "tag_name": "v0.1.9", "html_url": "https://github.com/Fluffy-Network/FluffyOMSI/releases/tag/v0.1.9", "body": "notes",
             "assets": [
                 {"name": "openOMSI-0.1.9-server-linux-x64.zip", "browser_download_url": "https://x/server", "size": 5},
                 {"name": name, "browser_download_url": "https://x/mine", "size": 42, "digest": "sha256:ABCDEF"}

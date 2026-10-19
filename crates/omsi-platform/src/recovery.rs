@@ -15,7 +15,7 @@ use std::time::{Duration, Instant};
 use crate::updater::{self, Place, Release};
 
 /// The project's list of broken releases, read from the repository's main branch.
-const HEALTH_URL: &str = "https://raw.githubusercontent.com/openOMSI-org/openOMSI/main/release/health.json";
+const HEALTH_URL: &str = "https://raw.githubusercontent.com/Fluffy-Network/FluffyOMSI/main/release/health.json";
 
 /// Beside the installed program: the version the `*.old-update` files belong to.
 pub(crate) const PREVIOUS: &str = ".openomsi-previous";
